@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\ADMIN\\\\Downloads\\\\english-speakers-main\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing)",
+      "PowerShell($routes = @\\(\"/\", \"/about\", \"/blog\", \"/contact\", \"/courses\", \"/courses/spoken-english-beginner\", \"/courses/spoken-english-intermediate\", \"/courses/ielts-general\", \"/courses/ielts-academic\"\\); foreach \\($r in $routes\\) { $code = \\(Invoke-WebRequest -Uri \"http://localhost:3000$r\" -UseBasicParsing\\).StatusCode; Write-Host \"$r -> $code\" })",
+      "PowerShell($remaining = @\\(\"/courses/celpip-general\", \"/courses/celpip-ls\", \"/courses/business-english\", \"/courses/interview-english\", \"/courses/pte-academic\"\\); foreach \\($r in $remaining\\) { $code = \\(Invoke-WebRequest -Uri \"http://localhost:3000$r\" -UseBasicParsing\\).StatusCode; Write-Host \"$r -> $code\" })",
+      "PowerShell($allRoutes = @\\(\"/\", \"/about\", \"/blog\", \"/contact\", \"/courses\", \"/courses/ielts-coaching\", \"/courses/celpip-training\", \"/courses/basic-to-advanced-english\", \"/courses/english-in-40-days\", \"/courses/english-for-telugu-speakers\", \"/courses/business-english\", \"/courses/workplace-english\", \"/courses/biolingo-program\", \"/courses/writing-skills\", \"/courses/phonetics\", \"/courses/english-literature\", \"/courses/teaching-for-success\", \"/courses/phonics-and-speaking-skills\"\\); foreach \\($r in $allRoutes\\) { try { $code = \\(Invoke-WebRequest -Uri \"http://localhost:3000$r\" -UseBasicParsing\\).StatusCode } catch { $code = \"ERR\" }; Write-Host \"$r -> $code\" })",
+      "PowerShell($html = \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing\\).Content; $html | Select-String -Pattern \"viewport|md:hidden|hidden md:\" | Select-Object -First 10)",
+      "PowerShell(cd \"c:\\\\Users\\\\ADMIN\\\\Downloads\\\\english-speakers-main\\\\english-speakers-main\"; $env:NEXT_TELEMETRY_DISABLED=\"1\"; npm run build 2>&1)"
+    ]
+  }
+}

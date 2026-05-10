@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --background: theme(colors.black);
+    --foreground: theme(colors.zinc.50);
+  }
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Utilities for Premium Vibe */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60;
+}
+
+.text-gradient-blue {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+.glass-panel-hover {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl hover:bg-white/10 transition-colors duration-300;
+}
+.topSet {
+  top: 20px;
+}
+.logo {
+  width: 150px;
+  height: 100px;
+}
+@media(max-width:991px){
+  .topSet{
+    top: 5px;
+  }
+  .logo{
+    width: 100px;
+    height: 80px;
+  }
+}
