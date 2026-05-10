@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     developer: '5xFuture',
   },
   icons: {
-    icon: '/images/English Speakers logo.png',
-    shortcut: '/images/English Speakers logo.png',
-    apple: '/images/English Speakers logo.png',
+    icon: '/images/English Speakers favicon.svg',
+    shortcut: '/images/English Speakers favicon.svg',
+    apple: '/images/English Speakers favicon.svg',
   },
   openGraph: {
     title: 'Best Spoken English Course in India | English Speakers',
