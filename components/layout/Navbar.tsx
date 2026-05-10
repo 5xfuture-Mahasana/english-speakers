@@ -258,15 +258,8 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="fixed top-0 left-0 w-full h-[100dvh] bg-[#050505] flex flex-col z-40 overflow-y-auto md:hidden"
           >
-            {/* Logo inside mobile menu */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                <img
-                  src="/images/logo-transparent.png"
-                  alt="English Speakers"
-                  className="w-[100px] h-auto object-contain"
-                />
-              </Link>
+            {/* Close button row */}
+            <div className="flex items-center justify-end px-6 py-4 border-b border-white/10">
               <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-white/60 hover:text-white">
                 <X size={24} />
               </button>
