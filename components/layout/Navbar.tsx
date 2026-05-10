@@ -240,7 +240,7 @@ export default function Navbar() {
 
         {/* ── MOBILE TOGGLE ── */}
         <button
-          className="md:hidden z-50 relative p-2 text-white/70 hover:text-white transition-colors"
+          className="md:hidden z-[60] relative p-2 text-white/70 hover:text-white transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -256,16 +256,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-0 left-0 w-full h-[100dvh] bg-[#050505] flex flex-col z-40 overflow-y-auto md:hidden"
+            className="fixed top-0 left-0 w-full h-[100dvh] bg-[#050505] flex flex-col z-50 overflow-y-auto md:hidden"
           >
-            {/* Close button row */}
-            <div className="flex items-center justify-end px-6 py-4 border-b border-white/10">
-              <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-white/60 hover:text-white">
-                <X size={24} />
-              </button>
-            </div>
-
-            <div className="flex flex-col gap-6 px-6 pt-8 pb-10">
+            <div className="flex flex-col gap-6 px-6 pt-20 pb-10">
               <Link href="/#home" className={`text-2xl font-bold transition-colors ${pathname === '/' ? 'text-blue-400' : 'text-white/70 hover:text-blue-400'}`}
                 onClick={(e) => handleNavClick(e, '/#home')}>Home</Link>
 
